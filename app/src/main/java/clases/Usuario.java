@@ -73,14 +73,17 @@ public class Usuario {
     }
 
     @Override
-    public String toString(){
-        return "Id: "+
+    public String toString() {
+        return "Id: " +
                 getId() +
                 "\nNombre: " +
                 getNombre() +
                 "\nPass:  " +
-                getContrasena()+
-        "\nRut:  " +
-                getRut();
+                getContrasena() +
+                "\nRut:  " +
+                getRut() +
+                "\nHabilitado: "+
+                isHabilitado();
+
     }
 }

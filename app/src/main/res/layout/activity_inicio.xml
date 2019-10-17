@@ -14,32 +14,22 @@
     <Button
         android:id="@+id/btn_carrito"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
         android:text="@string/iniciar_Carrito" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30sp" />
 
     <Button
         android:id="@+id/btn_productos"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
         android:text="@string/ver_productos" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30sp" />
 
     <Button
         android:id="@+id/btn_ver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ver" />
+        android:padding="20sp"
+        android:text="@string/ver_user" />
 
-    <Button
-        android:id="@+id/btn_drop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="drop db" />
 </LinearLayout>

@@ -49,6 +49,10 @@ public class Registrar_usuario extends AppCompatActivity {
                     Util.mostrar(con, "Las contraseñas no coinciden");
                 }
 
+                else if (!Util.validarRut(rut.getText().toString())){
+                    Util.mostrar(con, "El rut no es valido");
+                }
+
                 else if(contrasena.getText().toString().equals(conf_contrasena.getText().toString())){
 
                 serv.insertarUsuario(new Usuario(nombre.getText().toString(),apellido.getText().toString(),rut.getText().toString(),contrasena.getText().toString()));

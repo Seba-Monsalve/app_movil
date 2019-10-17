@@ -36,29 +36,32 @@
 
             <Button
                 android:id="@+id/btn_seccion1"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="3"
-                android:background="@android:color/holo_blue_bright"
+                android:background="@color/colorPrimary"
                 android:text="@string/bebidas" />
 
             <Button
                 android:id="@+id/button30"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="3"
-                android:background="@android:color/holo_blue_dark"
+                android:background="@color/colorPrimary"
                 android:text="@string/seccion" />
 
             <Button
                 android:id="@+id/button31"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="3"
-                android:background="@android:color/holo_orange_dark"
+                android:background="@color/colorPrimary"
                 android:text="@string/seccion" />
         </TableRow>
 
@@ -69,15 +72,17 @@
 
             <Button
                 android:id="@+id/button25"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="2"
-                android:background="@android:color/holo_orange_dark"
+                android:background="@color/colorPrimary"
                 android:text="@string/seccion" />
 
             <Button
                 android:id="@+id/button26"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
@@ -97,7 +102,7 @@
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="3"
-                android:background="@android:color/holo_green_dark"
+                android:background="@color/colorPrimary"
                 android:text="@string/seccion" />
 
             <Button
@@ -107,6 +112,7 @@
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="3"
+                android:background="@color/colorPrimary"
                 android:text="@string/seccion" />
 
             <Button
@@ -116,7 +122,7 @@
                 android:layout_height="90sp"
                 android:layout_margin="5sp"
                 android:layout_weight="3"
-                android:background="@android:color/holo_red_light"
+                android:background="@color/colorPrimary"
                 android:text="@string/seccion" />
 
         </TableRow>

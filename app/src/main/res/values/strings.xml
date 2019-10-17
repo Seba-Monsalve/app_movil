@@ -29,6 +29,7 @@
     <string name="ver">Ver</string>
     <string name="err_user_length">El usuario debe contener mas de 3 letras</string>
     <string name="err_pass_lenght">La password debe tener mas 5 caracteres</string>
-    <string name="eliminar">Eliminar</string>>
+    <string name="eliminar">Eliminar</string>
+    <string name="ver_user">Ver usuarios</string>>
 
 </resources>
