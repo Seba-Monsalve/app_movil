@@ -9,6 +9,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Conexion extends SQLiteOpenHelper {
     public static final String DB_NAME="bd1";
     public static final int VERSION = 1;
@@ -27,6 +29,7 @@ public class Conexion extends SQLiteOpenHelper {
                 "rut text,"+
                 "contrasena text"+
                 ")");
+
     }
 
     @Override

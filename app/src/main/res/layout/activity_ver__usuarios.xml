@@ -15,22 +15,4 @@
 
     </ListView>
 
-    <Button
-        android:id="@+id/btn_agregar"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#8BC34A"
-        android:text="@string/registrar"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btn_eliminar"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:background="#F44336"
-        android:text="@string/eliminar"
-        android:textStyle="bold" />
 </LinearLayout>

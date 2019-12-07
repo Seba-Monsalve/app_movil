@@ -40,22 +40,22 @@ public class Registrar_usuario extends AppCompatActivity {
         btn_ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (conf_contrasena.getText().toString().isEmpty() || contrasena.getText().toString().isEmpty() ){
-                Util.mostrar(con, "La contraseña no puede ser nula");
-                }
+                                if (conf_contrasena.getText().toString().isEmpty() || contrasena.getText().toString().isEmpty() ){
+                        Util.mostrar(con, "La contraseña no puede ser nula");
+                    }
 
-                //REDUNDANCIA EN SU MAXIMA EXPRESION AJAJ
-                else if(!contrasena.getText().toString().equals(conf_contrasena.getText().toString())){
-                    Util.mostrar(con, "Las contraseñas no coinciden");
-                }
+                    //REDUNDANCIA EN SU MAXIMA EXPRESION AJAJ
+                    else if(!contrasena.getText().toString().equals(conf_contrasena.getText().toString())){
+                        Util.mostrar(con, "Las contraseñas no coinciden");
+                    }
 
-                else if (!Util.validarRut(rut.getText().toString())){
-                    Util.mostrar(con, "El rut no es valido");
-                }
+                    else if (!Util.validarRut(rut.getText().toString())){
+                        Util.mostrar(con, "El rut no es valido");
+                    }
 
-                else if(contrasena.getText().toString().equals(conf_contrasena.getText().toString())){
+                    else if(contrasena.getText().toString().equals(conf_contrasena.getText().toString())){
 
-                serv.insertarUsuario(new Usuario(nombre.getText().toString(),apellido.getText().toString(),rut.getText().toString(),contrasena.getText().toString()));
+                        serv.insertarUsuario(new Usuario(nombre.getText().toString(),apellido.getText().toString(),rut.getText().toString(),contrasena.getText().toString()));
 
                 Intent inicio = new Intent(Registrar_usuario.this, inicio.class);
                 startActivity(inicio);

@@ -31,6 +31,11 @@
     <string name="err_pass_lenght">La password debe tener mas 5 caracteres</string>
     <string name="eliminar">Eliminar</string>
     <string name="ver_user">Ver usuarios</string>
-    <string name="proveedor">Proveedor</string>>
+    <string name="proveedor">Proveedor</string>
+    <string name="modificar">Modificar</string>
+    <string name="habilitar">Habilitar</string>
+    <string name="deshabilitar">Deshabilitar</string>
+    <string name="stock_producto">Agregar Stock Producto</string>
+
 
 </resources>

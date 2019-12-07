@@ -32,9 +32,7 @@ public class ver_producto extends AppCompatActivity {
 
         lista_producto  = new ArrayList<Producto>();
 
-        lista_producto.add(new Producto(1, "Fanta", 1500, "Toma el sabor", 0));
-        lista_producto.add(new Producto(1, "CocaCola", 1500, "Toma el sabor", 0));
-        lista_producto.add(new Producto(1, "Limonada", 1500, "Toma el sabor", 0));
+
 
 
         AdaptadorProducto adaptador =  new AdaptadorProducto(this);
@@ -49,8 +47,7 @@ public class ver_producto extends AppCompatActivity {
                 intent.putExtra("id", String.valueOf(lista_producto.get(position).getId()));
                 intent.putExtra("nombre", lista_producto.get(position).getNombre());
                 intent.putExtra("precio", String.valueOf(lista_producto.get(position).getPrecio()));
-                intent.putExtra("desc", lista_producto.get(position).getDescrp());
-                intent.putExtra("tipo", lista_producto.get(position).getTipo());
+
                 startActivity(intent);
             }
         });
@@ -82,23 +79,7 @@ public class ver_producto extends AppCompatActivity {
             nombre.setText(String.valueOf(lista_producto.get(pos).getNombre()));
             precio.setText(String.valueOf(lista_producto.get(pos).getPrecio()));
 
-            switch (lista_producto.get(pos).getTipo()) {
-                case 0:
-                    imagen.setImageResource(R.drawable.can);
-                    break;
-                case 1:
-                    imagen.setImageResource(R.drawable.postre);
-                    break;
-                case 2:
-                    imagen.setImageResource(R.drawable.sandwich);
-                    break;
-                case 3:
-                    imagen.setImageResource(R.drawable.comida);
-                    break;
-                default:
-                    imagen.setImageResource(R.drawable.ic_launcher_foreground);
-                    break;
-            }
+
             return item;
         }
     }

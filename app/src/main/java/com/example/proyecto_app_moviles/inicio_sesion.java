@@ -31,6 +31,7 @@ public class inicio_sesion extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_sesion);
 
         serv = new Servicio(this);
+        serv.insertarUsuario(new Usuario("q", "erre", "1-9", "q"));
         Button ingresar = (Button) findViewById(R.id.btn_ingresar);
         Button registrar = (Button) findViewById(R.id.btn_registrar);
         et_user = (EditText) findViewById(R.id.et_user);
@@ -50,6 +51,7 @@ public class inicio_sesion extends AppCompatActivity {
                     startActivity(inicio);}
                 }
                 if(et_user.length()<5){
+                    Util.mostrar(con,"Contraseña menor a 5 caracteres");
 
                 }
                 if(flag==0){

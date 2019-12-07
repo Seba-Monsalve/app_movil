@@ -59,30 +59,10 @@ public class detalle_producto extends AppCompatActivity {
             tv_id.setText(id);
             tv_nombre.setText(nombre);
             tv_precio.setText(precio);
-            tv_desc.setText(desc);
-            tv_tipo.setText(Producto.tipo_producto[tipo]);
+
             imagen = findViewById(R.id.imagen);
 
 
-            Log.d("INt", "tipo: " +tipo);
-
-            switch (tipo) {
-                case 0:
-                    imagen.setImageResource(R.drawable.can);
-                    break;
-                case 1:
-                    imagen.setImageResource(R.drawable.postre);
-                    break;
-                case 2:
-                    imagen.setImageResource(R.drawable.sandwich);
-                    break;
-                case 3:
-                    imagen.setImageResource(R.drawable.comida);
-                    break;
-                default:
-                    imagen.setImageResource(R.drawable.ic_launcher_foreground);
-                    break;
-            }
 
 
 

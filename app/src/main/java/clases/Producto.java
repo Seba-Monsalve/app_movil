@@ -3,27 +3,18 @@ package clases;
 
 public class Producto {
 
-    public static String[] tipo_producto = {"Bebida", "Postre", "Sandwich","Comida"};
     private int id;
     private String nombre;
     private int precio;
     private String descrp;
-    private int tipo;
+    private int categoria;
 
-    public Producto(int id, String nombre, int precio, String descrp, int tipo) {
+    public Producto(int id, String nombre, int precio, int categoria) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.descrp = descrp;
-        this.tipo = tipo;
-    }
-
-    public static String[] getTipo_producto() {
-        return tipo_producto;
-    }
-
-    public static void setTipo_producto(String[] tipo_producto) {
-        Producto.tipo_producto = tipo_producto;
+        this.categoria = categoria;
     }
 
     public int getId() {
@@ -58,11 +49,11 @@ public class Producto {
         this.descrp = descrp;
     }
 
-    public int getTipo() {
-        return tipo;
+    public int getCategoria() {
+        return categoria;
     }
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
     }
 }
