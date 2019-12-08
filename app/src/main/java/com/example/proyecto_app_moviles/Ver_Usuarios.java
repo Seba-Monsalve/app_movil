@@ -123,8 +123,6 @@ public class Ver_Usuarios extends AppCompatActivity {
                         Util.mostrar(getApplicationContext(),"Contraseña modificada" );
                         refrescarLista();
                         popupWindow.dismiss();
-
-
                     }
                 }
                 catch (Exception e){

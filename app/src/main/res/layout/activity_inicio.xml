@@ -12,13 +12,6 @@
         android:layout_height="50sp" />
 
     <Button
-        android:id="@+id/btn_carrito"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20sp"
-        android:text="@string/iniciar_Carrito" />
-
-    <Button
         android:id="@+id/btn_productos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,10 +19,25 @@
         android:text="@string/ver_productos" />
 
     <Button
+        android:id="@+id/btn_agregar_producto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:text="@string/agregar_producto" />
+
+    <Button
+        android:id="@+id/btn_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:text="@string/stock_producto" />
+
+    <Button
         android:id="@+id/btn_ver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20sp"
         android:text="@string/ver_user" />
+
 
 </LinearLayout>

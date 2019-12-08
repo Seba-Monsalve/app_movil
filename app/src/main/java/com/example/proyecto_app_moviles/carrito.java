@@ -43,7 +43,7 @@ public class carrito extends AppCompatActivity {
                 Intent intent = new Intent(carrito.this,detalle_producto.class);
                 intent.putExtra("id", String.valueOf(lista_producto.get(position).getId()));
                 intent.putExtra("nombre", lista_producto.get(position).getNombre());
-                intent.putExtra("precio", String.valueOf(lista_producto.get(position).getPrecio()));
+                intent.putExtra("precio", String.valueOf(lista_producto.get(position).getStock()));
 
                 startActivity(intent);
             }
@@ -74,7 +74,7 @@ public class carrito extends AppCompatActivity {
 
             // OJO CON EL PARAMETRO DE INT A STRING!!
             nombre.setText(String.valueOf(lista_producto.get(pos).getNombre()));
-            precio.setText(String.valueOf(lista_producto.get(pos).getPrecio()));
+            precio.setText(String.valueOf(lista_producto.get(pos).getStock()));
 
 
             return item;

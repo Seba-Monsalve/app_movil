@@ -19,15 +19,17 @@ public class inicio extends AppCompatActivity {
         serv = new Servicio(this);
 
 
-        Button btn_carrito = (Button) findViewById(R.id.btn_carrito);
+        Button btn_stock = (Button) findViewById(R.id.btn_stock);
         Button btn_productos= (Button) findViewById(R.id.btn_productos);
         Button btn_ver= (Button) findViewById(R.id.btn_ver);
+        Button btn_agregar_producto= (Button) findViewById(R.id.btn_agregar_producto);
 
 
-        btn_carrito.setOnClickListener(new View.OnClickListener() {
+
+        btn_stock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(inicio.this, carrito.class);
+                Intent intent = new Intent(inicio.this, agregar_productos_tienda.class);
                 startActivity(intent);
             }
         });
@@ -47,6 +49,15 @@ public class inicio extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_agregar_producto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(inicio.this, agregar_producto_carrito.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

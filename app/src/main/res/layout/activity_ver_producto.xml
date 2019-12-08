@@ -36,7 +36,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/tx_precio"
+            android:id="@+id/tv_precio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center|center_horizontal"

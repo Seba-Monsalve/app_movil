@@ -6,12 +6,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -51,11 +54,8 @@ public class agregar_productos_tienda extends AppCompatActivity {
 
         spn_categoria = findViewById(R.id.spn_categoria);
         spn_producto = findViewById(R.id.spn_producto);
-        prueba = findViewById(R.id.prueba);
 
         btn_aceptar = findViewById(R.id.btn_aceptar);
-
-        et_precio = findViewById(R.id.et_precio);
         et_cantidad = findViewById(R.id.et_cantidad);
 
 
@@ -64,7 +64,6 @@ public class agregar_productos_tienda extends AppCompatActivity {
 
         Util.getPHP(this, spn_categoria, "categoria","","");
 
-        final String producto_seleccionado;
 
         spn_categoria.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         @Override
@@ -94,11 +93,17 @@ public class agregar_productos_tienda extends AppCompatActivity {
         btn_aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.postPHP_stock(cont,valor_producto_spinner,et_cantidad.getText().toString(),prueba);
+                if(et_cantidad.getText().toString().isEmpty() || valor_producto_spinner.isEmpty())
+                {
+                    Util.mostrar(cont,"Debes definir el nombre del producto y cantidad");
+                }
+                else {
+                    Util.postPHP_stock(cont, valor_producto_spinner, et_cantidad.getText().toString());
+                }
             }
         });
+        }
 
-    }
 
 
 

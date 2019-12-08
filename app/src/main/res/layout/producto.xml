@@ -43,7 +43,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="0"
-            android:text="@string/precio_prod"
             android:textSize="20sp" />
 
     </LinearLayout>

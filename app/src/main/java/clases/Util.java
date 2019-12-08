@@ -2,25 +2,40 @@ package clases;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.proyecto_app_moviles.R;
+import com.example.proyecto_app_moviles.Ver_Usuarios;
+import com.example.proyecto_app_moviles.productos;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
 import java.util.ArrayList;
+
+import static androidx.core.content.ContextCompat.getSystemService;
 
 
 public class Util {
@@ -61,31 +76,34 @@ public class Util {
         return validacion;
     }
 
-    public static void getPHP(Context cont, final TextView textView, String req) {
-        String url = ip +"server/conexion.php?peticion=" + req;
+
+
+
+    public static void postPHP_stock(final Context cont, String nombre_producto, String stock_value) {
+        String url = ip +"server/conexion.php?peticion=update_stock_producto&nombre_producto="+nombre_producto+"&stock="+stock_value;
         // Request a string response from the provided URL.
+        //Util.mostrar(cont,url);
         RequestQueue queue = Volley.newRequestQueue(cont);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        // Display the first 500 characters of the response string.
-                        textView.setText("Response is: " + response);
+                        Util.mostrar(cont,response);
+
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                textView.setText("That didn't work!");
+                Util.mostrar(cont,"Error: " + error.toString());
             }
         });
         queue.add(stringRequest);
     }
 
-    public static void postPHP_stock(final Context cont, String nombre_producto, String stock_value, TextView prueba) {
-        String url = ip +"server/conexion.php?peticion=update_stock_producto&nombre_producto="+nombre_producto+"&stock="+stock_value;
+    public static void postPHP_agregar_producto(final Context cont, String nombre_producto, String stock_value, String precio, int categoria) {
+        String url = ip +"/server/conexion.php?peticion=agregar_producto&nombre="+nombre_producto+"&precio="+precio+"&stock="+stock_value+"&categoria="+categoria;
         // Request a string response from the provided URL.
         //Util.mostrar(cont,url);
-        prueba.setText(url);
         RequestQueue queue = Volley.newRequestQueue(cont);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -105,7 +123,6 @@ public class Util {
 
     public static void getPHP(final Context cont, final Spinner spinner, final String req, final String filtro, final String value) {
         final ArrayList<String> datos = new ArrayList<>();
-        datos.add("Seleccione una opcion");
         if(!req.isEmpty()){
             String url = ip+"server/conexion.php?peticion="+req;
         if(!filtro.isEmpty()){
@@ -128,9 +145,8 @@ public class Util {
                                 String v2 = job.optString(req);
                                 datos.add(v2);
                             }
-                            ArrayAdapter<String> adapter =
-                                    new ArrayAdapter<String>(cont, android.R.layout.simple_spinner_dropdown_item, datos);
-                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<String>(cont, android.R.layout.simple_spinner_dropdown_item, datos);
+
                             spinner.setAdapter(adapter);
                         } catch (JSONException ex) {
                             Util.mostrar(cont,"Error al parsear el JSON");
@@ -161,5 +177,9 @@ public class Util {
         }
 
     }
+
+
+
+
 
 }

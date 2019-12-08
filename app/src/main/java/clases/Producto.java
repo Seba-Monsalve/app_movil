@@ -1,21 +1,15 @@
 package clases;
 
 
+
+
 public class Producto {
 
     private int id;
     private String nombre;
+    private int stock;
     private int precio;
-    private String descrp;
-    private int categoria;
 
-    public Producto(int id, String nombre, int precio, int categoria) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descrp = descrp;
-        this.categoria = categoria;
-    }
 
     public int getId() {
         return id;
@@ -33,27 +27,28 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
-        return precio;
+    public int getStock() {
+        return stock;
     }
 
-    public void setPrecio(int precio) {
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Producto(int id, String nombre, int  stock, int precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.stock = stock;
         this.precio = precio;
     }
 
-    public String getDescrp() {
-        return descrp;
+
+    @Override
+    public String toString(){
+        return "ID: "+ this.getId()
+                + "\nNombre: "+this.getNombre()
+                + "\nStock: " + this.getStock()
+                + "\nPrecio: "+ this.precio;
     }
 
-    public void setDescrp(String descrp) {
-        this.descrp = descrp;
-    }
-
-    public int getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(int categoria) {
-        this.categoria = categoria;
-    }
 }

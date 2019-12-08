@@ -36,6 +36,7 @@
     <string name="habilitar">Habilitar</string>
     <string name="deshabilitar">Deshabilitar</string>
     <string name="stock_producto">Agregar Stock Producto</string>
+    <string name="Cambiar"> Cambiar atributos </string>>
 
 
 </resources>

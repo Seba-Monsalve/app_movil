@@ -6,6 +6,13 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +53,30 @@ public class Servicio {
             db.close();
         }
     }
+
+    public void modificarProducto(String id, String nombre_actual, String precio_value) {
+
+        String url = Util.ip +"server/conexion.php?peticion=update_producto&nombre_producto="+nombre_actual+"&precio="+precio_value;
+        // Request a string response from the provided URL.
+        //Util.mostrar(cont,url);
+        RequestQueue queue = Volley.newRequestQueue(cont);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Util.mostrar(cont,response);
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Util.mostrar(cont,"Error: " + error.toString());
+            }
+        });
+        queue.add(stringRequest);
+    }
+
+
 
     public List<Usuario> getUsuarios() {
         SQLiteDatabase db = conex.getWritableDatabase();

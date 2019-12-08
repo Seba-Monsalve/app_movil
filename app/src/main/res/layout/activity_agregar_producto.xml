@@ -35,7 +35,7 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/et_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -45,36 +45,40 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cantidad"
+        android:text="@string/categoria"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spn_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stock_producto"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/et_cantidad"
+        android:id="@+id/et_stock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/subtotal"
-        android:textSize="20sp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30sp" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20sp"
-        android:gravity="center"
-        android:text="@string/subtotal"
-        android:textSize="40sp"
-        tools:text="$0 .-" />
+        android:text="@string/precio"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
 
     <Space
         android:layout_width="wrap_content"
@@ -85,21 +89,8 @@
         android:layout_height="match_parent" >
 
         <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:background="@android:color/holo_red_light"
-            android:text="@string/volver" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="30sp"
-            android:layout_weight="3" />
-
-        <Button
             android:id="@+id/btn_aceptar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:background="@color/colorPrimary"

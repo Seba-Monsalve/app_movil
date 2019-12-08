@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import clases.Producto;
 
 public class detalle_producto extends AppCompatActivity {
 
@@ -52,7 +49,7 @@ public class detalle_producto extends AppCompatActivity {
 
             tv_id = findViewById(R.id.tv_id);
             tv_nombre = findViewById(R.id.tv_nombre);
-            tv_precio = findViewById(R.id.tx_precio);
+            tv_precio = findViewById(R.id.tv_precio);
             tv_desc = findViewById(R.id.tx_desc);
             tv_tipo = findViewById(R.id.tx_tipo);
 

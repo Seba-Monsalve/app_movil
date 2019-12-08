@@ -34,7 +34,6 @@ public class ver_producto extends AppCompatActivity {
 
 
 
-
         AdaptadorProducto adaptador =  new AdaptadorProducto(this);
 
         ListView lv = findViewById(R.id.lv_producto);
@@ -46,7 +45,7 @@ public class ver_producto extends AppCompatActivity {
                 Intent intent = new Intent(ver_producto.this,detalle_producto.class);
                 intent.putExtra("id", String.valueOf(lista_producto.get(position).getId()));
                 intent.putExtra("nombre", lista_producto.get(position).getNombre());
-                intent.putExtra("precio", String.valueOf(lista_producto.get(position).getPrecio()));
+                intent.putExtra("precio", String.valueOf(lista_producto.get(position).getStock()));
 
                 startActivity(intent);
             }
@@ -77,9 +76,7 @@ public class ver_producto extends AppCompatActivity {
 
             // OJO CON EL PARAMETRO DE INT A STRING!!
             nombre.setText(String.valueOf(lista_producto.get(pos).getNombre()));
-            precio.setText(String.valueOf(lista_producto.get(pos).getPrecio()));
-
-
+            precio.setText(String.valueOf(lista_producto.get(pos).getStock()));
             return item;
         }
     }
